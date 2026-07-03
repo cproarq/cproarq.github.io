@@ -20,3 +20,11 @@ grid-proyectos {
 .proyecto img:hover {
     transform: scale(1.02); /* Un efecto sutil al pasar el ratón */
 }
+
+/* Esto asegura que la imagen no sea nunca más grande que su contenedor */
+.proyecto img {
+    width: 100%;       /* La imagen ocupará el 100% del ancho del div */
+    height: 300px;     /* Fijamos una altura fija para que todas las tarjetas sean iguales */
+    object-fit: cover; /* ¡Esta es la clave! Corta la imagen proporcionalmente para que rellene el espacio sin deformarse */
+    display: block;
+}
