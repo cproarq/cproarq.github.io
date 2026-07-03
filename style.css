@@ -1,37 +1,74 @@
-head { background-color: #ffffff; }
-body { background-color: #ffffff; }
-h1 { font-family: 'Helvetica', sans-serif; color: #000000; }
-h2 { font-family: 'Helvetica', sans-serif; color: #000000; }
-h3 { font-family: 'Helvetica', sans-serif; color: #000000; }
-grid-proyectos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
-    gap: 20px;
-    padding: 20px;
+/* 1. Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Esto es para forzar a que el grid funcione */
+/* 2. Estilos globales */
+body {
+    background-color: #ffffff;
+    font-family: 'Helvetica', sans-serif;
+    color: #000000;
+    padding: 20px;
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 3. Tipografía */
+h1, h2, h3 {
+    font-family: 'Helvetica', sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333333;
+}
+
+h3 {
+    font-size: 18px;
+    color: #666666;
+    margin-top: 10px;
+}
+
+/* 4. Grid de proyectos */
 .grid-proyectos {
     display: grid;
-    /* Esto crea columnas que se ajustan solas al ancho disponible */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    /* Usamos 1fr para que el espacio se reparta bien */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* 5. Tarjeta del proyecto */
 .proyecto {
-    background-color: #ffffff; /* Si ves cajas grises, el CSS está funcionando */
-    border: 1px solid #000000;
+    background-color: #ffffff;
+    border: 2px solid #000000;
     padding: 10px;
+    transition: transform 0.3s ease;
 }
 
+/* 6. Imagen dentro del proyecto */
 .proyecto img {
-    width: 100%;
-    height: 400px;
+    width: 100%; /* Corregido: añadido el % */
+    height: 300px; 
     object-fit: cover;
     display: block;
 }
 
+/* Efecto hover */
 .proyecto img:hover {
-    transform: scale(1.02); /* Un efecto sutil al pasar el ratón */
+    transform: scale(1.02);
 }
