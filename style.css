@@ -2,3 +2,20 @@ body { background-color: #000000; }
 h1 { font-family: 'Helvetica', sans-serif; color: #ffffff; }
 h2 { font-family: 'Helvetica', sans-serif; color: #ffffff; }
 h3 { font-family: 'Helvetica', sans-serif; color: #ffffff; }
+grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.proyecto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.proyecto img:hover {
+    transform: scale(1.02); /* Un efecto sutil al pasar el ratón */
+}
