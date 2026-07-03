@@ -5,26 +5,33 @@ h2 { font-family: 'Helvetica', sans-serif; color: #000000; }
 h3 { font-family: 'Helvetica', sans-serif; color: #000000; }
 grid-proyectos {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Esto es para forzar a que el grid funcione */
+.grid-proyectos {
+    display: grid;
+    /* Esto crea columnas que se ajustan solas al ancho disponible */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
 }
 
+.proyecto {
+    background-color: #ffffff; /* Si ves cajas grises, el CSS está funcionando */
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
 .proyecto img {
     width: 100%;
-    height: auto;
+    height: 400px;
+    object-fit: cover;
     display: block;
-    transition: transform 0.3s ease;
 }
 
 .proyecto img:hover {
     transform: scale(1.02); /* Un efecto sutil al pasar el ratón */
-}
-
-/* Esto asegura que la imagen no sea nunca más grande que su contenedor */
-.proyecto img {
-    width: 100%;       /* La imagen ocupará el 100% del ancho del div */
-    height: 300px;     /* Fijamos una altura fija para que todas las tarjetas sean iguales */
-    object-fit: cover; /* ¡Esta es la clave! Corta la imagen proporcionalmente para que rellene el espacio sin deformarse */
-    display: block;
 }
