@@ -12,51 +12,90 @@
     <header>
         <h1>Portfolio universitario</h1>
         <h3>Luis Cepero, estudiante de Arquitectura de la Universidad de Zaragoza.</h3>
+        <!-- Menú de navegación -->
+        <nav class="menu-navegacion">
+            <a href="#proyectos">Proyectos</a>
+            <a href="#analisis">Análisis</a>
+            <a href="#sobre-mi">Sobre mí</a>
+        </nav>
     </header>
 
-    <!-- SECCIÓN 1: PROYECTOS -->
-    <h2>Proyectos de Arquitectura</h2>
-    <main class="grid-proyectos">
-        
-        <!-- Tarjeta 1: Vestigios (CON ENLACE) -->
-        <div class="proyecto">
-            <a href="assets/proyectos/proyecto-01/vestigios.html">
-                <img src="assets/proyectos/proyecto-01/miniatura-vestigios-2.jpg" alt="Fotomontaje interior">
-                <h3>Vestigios</h3>
-            </a>
-        </div>
-        
-        <!-- Tarjeta 2: Casa en Moledo (CON ENLACE) -->
-        <div class="proyecto">
-            <a href="assets/proyectos/proyecto-02/moledo.html">
-                <img src="assets/proyectos/proyecto-02/miniatura-moledo-1.jpg" alt="Sección fugada">
-                <h3>Casa en Moledo</h3>
-            </a>
-        </div>
-        
-        <!-- Tarjeta 3: Perfect Days (CON ENLACE - Apunta a un archivo que crearás después) -->
-        <div class="proyecto">
-            <a href="assets/proyectos/proyecto-03/perfect-days.html">
-                <img src="assets/proyectos/proyecto-03/miniatura-perfect-days-1.png" alt="Proyecto 3">
-                <h3>Perfect Days</h3>
-            </a>
-        </div>
+    <!-- UN SOLO <main> QUE CONTIENE TODO EL TRABAJO PRINCIPAL DE LA WEB -->
+    <main>
 
-    </main>
+        <!-- SECCIÓN 1: PROYECTOS -->
+        <h2 id="proyectos">Proyectos de Arquitectura</h2>
+        <section class="grid-proyectos">
+            
+            <!-- Tarjeta 1: Vestigios (CON ENLACE) -->
+            <div class="proyecto">
+                <a href="assets/proyectos/proyecto-01/vestigios.html">
+                    <img src="assets/proyectos/proyecto-01/miniatura-vestigios-2.jpg" alt="Fotomontaje interior">
+                    <h3>Vestigios</h3>
+                </a>
+            </div>
+            
+            <!-- Tarjeta 2: Casa en Moledo (CON ENLACE) -->
+            <div class="proyecto">
+                <a href="assets/proyectos/proyecto-02/moledo.html">
+                    <img src="assets/proyectos/proyecto-02/miniatura-moledo-1.jpg" alt="Sección fugada">
+                    <h3>Casa en Moledo</h3>
+                </a>
+            </div>
+            
+            <!-- Tarjeta 3: Perfect Days (CON ENLACE) -->
+            <div class="proyecto">
+                <a href="assets/proyectos/proyecto-03/perfect-days.html">
+                    <img src="assets/proyectos/proyecto-03/miniatura-perfect-days-1.png" alt="Proyecto 3">
+                    <h3>Perfect Days</h3>
+                </a>
+            </div>
 
-    <!-- SECCIÓN 2: ANÁLISIS (Nueva) -->
-    <h2>Análisis Arquitectónico</h2>
-    <section class="grid-analisis">
-        <div class="analisis">
-            <img src="https://via.placeholder.com/400x300" alt="Análisis 1">
-            <h3>Análisis del Espacio Absoluto</h3>
-        </div>
+        </section>
 
-        <div class="analisis">
-            <img src="https://via.placeholder.com/400x300" alt="Análisis 2">
-            <h3>Estudio de Soleamiento y Sombras</h3>
-        </div>
-    </section>
+        <!-- SECCIÓN 2: ANÁLISIS -->
+        <h2 id="analisis">Análisis Arquitectónico</h2>
+        <section class="grid-analisis">
+            <div class="analisis">
+                <img src="https://via.placeholder.com/400x300" alt="Análisis 1">
+                <h3>Análisis del Espacio Absoluto</h3>
+            </div>
+
+            <div class="analisis">
+                <img src="https://via.placeholder.com/400x300" alt="Análisis 2">
+                <h3>Estudio de Soleamiento y Sombras</h3>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: SOBRE MÍ -->
+        <hr class="separador">
+        
+        <h2 id="sobre-mi">Sobre mí</h2>
+        <section class="seccion-sobre-mi">
+            <!-- Columna 1: Tu texto -->
+            <div class="bio-texto">
+                <p>Hola, soy Luis Cepero. Currently curso mis estudios de Arquitectura en la Universidad de Zaragoza. Me apasiona el diseño espacial, la investigación arquitectónica y la representación gráfica de proyectos.</p>
+                <p>Busco siempre aprender nuevas herramientas y metodologías que me permitan aportar soluciones creativas y funcionales a los retos contemporáneos del espacio habitado.</p>
+                
+                <div class="contacto-links">
+                    <a href="mailto:tu-email@correo.com" class="boton-contacto">Contactar por Email</a>
+                    <a href="https://linkedin.com" target="_blank" class="enlace-social">LinkedIn</a>
+                </div>
+            </div>
+
+            <!-- Columna 2: Tus habilidades (Habilidades Técnicas) -->
+            <div class="habilidades">
+                <h3>Habilidades</h3>
+                <ul>
+                    <li><strong>Modelado & Planimetría:</strong> AutoCAD, Revit, Rhinoceros</li>
+                    <li><strong>Representación & Render:</strong> V-Ray, Lumion, Twinmotion</li>
+                    <li><strong>Postproducción:</strong> Photoshop, InDesign, Illustrator</li>
+                    <li><strong>Idiomas:</strong> Español (Nativo), Inglés</li>
+                </ul>
+            </div>
+        </section>
+
+    </main> <!-- CIERRE DEL <main> -->
 
 </body>
 </html>

@@ -1,11 +1,16 @@
-/* 1. Reset básico */
+/* ==========================================================================
+   1. RESET BÁSICO Y CONFIGURACIÓN GLOBAL
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 2. Estilos globales */
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave para el menú interno */
+}
+
 body {
     background-color: #ffffff;
     font-family: 'Helvetica', sans-serif;
@@ -19,7 +24,9 @@ header {
     margin-bottom: 40px;
 }
 
-/* 3. Tipografía */
+/* ==========================================================================
+   2. TIPOGRAFÍA
+   ========================================================================== */
 h1, h2, h3 {
     font-family: 'Helvetica', sans-serif;
 }
@@ -34,7 +41,7 @@ h2 {
     text-align: center;
     font-size: 24px;
     color: #333333;
-    margin-top: 40px; /* Un poco de margen superior para separar las secciones principales */
+    margin-top: 40px; /* Separación para las grandes secciones */
     margin-bottom: 20px;
 }
 
@@ -44,17 +51,40 @@ h3 {
     margin-top: 10px;
 }
 
-/* 4. Estilos compartidos para Grids (Proyectos y Análisis) */
+/* ==========================================================================
+   3. MENÚ DE NAVEGACIÓN (NAVBAR)
+   ========================================================================== */
+.menu-navegacion {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.menu-navegacion a {
+    color: #666666;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px; /* Look arquitectónico */
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.menu-navegacion a:hover {
+    color: #000000;
+}
+
+/* ==========================================================================
+   4. GRIDS Y TARJETAS (PROYECTOS Y ANÁLISIS)
+   ========================================================================== */
 .grid-proyectos, 
 .grid-analisis {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 24px;
     max-width: 1440px;
-    margin: 0 auto 40px auto; /* Añadimos separación abajo */
+    margin: 0 auto 40px auto;
 }
 
-/* 5. Estilos compartidos para las Tarjetas */
 .proyecto, 
 .analisis {
     background-color: #ffffff;
@@ -63,7 +93,14 @@ h3 {
     transition: transform 0.3s ease;
 }
 
-/* 6. Estilos compartidos para las Imágenes */
+/* Configuración de los enlaces en las tarjetas */
+.proyecto a, 
+.analisis a {
+    text-decoration: none;
+    color: inherit;     /* Hereda el color del texto sin volverse azul */
+    display: block;     /* Hace que toda la tarjeta sea clicable */
+}
+
 .proyecto img, 
 .analisis img {
     width: 100%;
@@ -73,13 +110,82 @@ h3 {
     transition: transform 0.3s ease;
 }
 
-/* Efecto hover en las imágenes */
+/* Efecto hover en imágenes */
 .proyecto img:hover, 
 .analisis img:hover {
     transform: scale(1.02);
-    
 }
-.proyecto a, 
-.analisis a {
-    text-decoration: none; /* Quita el subrayado */
+
+/* ==========================================================================
+   5. SECCIÓN SOBRE MÍ
+   ========================================================================== */
+.separador {
+    border: 0;
+    border-top: 1px solid #cecece;
+    margin: 60px auto;
+    max-width: 1440px;
+}
+
+.seccion-sobre-mi {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Dos columnas: bio ancha, habilidades estrecha */
+    gap: 50px;
+    max-width: 1440px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+}
+
+.bio-texto p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333333;
+    text-align: justify;
+}
+
+.contacto-links {
+    margin-top: 30px;
+}
+
+.boton-contacto {
+    display: inline-block;
+    background-color: #000000;
+    color: #ffffff !important;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.boton-contacto:hover {
+    background-color: #444444;
+}
+
+.enlace-social {
+    margin-left: 20px;
+    color: #666666 !important;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.enlace-social:hover {
+    color: #000000 !important;
+    text-decoration: underline;
+}
+
+/* Lista de habilidades */
+.habilidades h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.habilidades ul {
+    list-style: none;
+}
+
+.habilidades li {
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #555555;
 }
