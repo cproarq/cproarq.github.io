@@ -11,7 +11,7 @@ body {
     font-family: 'Helvetica', sans-serif;
     color: #000000;
     padding: 20px;
-    line-height: 1.6; /* Mejora la legibilidad */
+    line-height: 1.6;
 }
 
 header {
@@ -34,6 +34,8 @@ h2 {
     text-align: center;
     font-size: 24px;
     color: #333333;
+    margin-top: 40px; /* Un poco de margen superior para separar las secciones principales */
+    margin-bottom: 20px;
 }
 
 h3 {
@@ -42,33 +44,37 @@ h3 {
     margin-top: 10px;
 }
 
-/* 4. Grid de proyectos */
-.grid-proyectos {
+/* 4. Estilos compartidos para Grids (Proyectos y Análisis) */
+.grid-proyectos, 
+.grid-analisis {
     display: grid;
-    /* Usamos 1fr para que el espacio se reparta bien */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 24px;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1440px;
+    margin: 0 auto 40px auto; /* Añadimos separación abajo */
 }
 
-/* 5. Tarjeta del proyecto */
-.proyecto {
+/* 5. Estilos compartidos para las Tarjetas */
+.proyecto, 
+.analisis {
     background-color: #ffffff;
-    border: 2px solid #000000;
+    border: 1px solid #cecece;
     padding: 10px;
     transition: transform 0.3s ease;
 }
 
-/* 6. Imagen dentro del proyecto */
-.proyecto img {
-    width: 100%; /* Corregido: añadido el % */
-    height: 300px; 
+/* 6. Estilos compartidos para las Imágenes */
+.proyecto img, 
+.analisis img {
+    width: 100%;
+    height: 400px; 
     object-fit: cover;
     display: block;
+    transition: transform 0.3s ease;
 }
 
-/* Efecto hover */
-.proyecto img:hover {
+/* Efecto hover en las imágenes */
+.proyecto img:hover, 
+.analisis img:hover {
     transform: scale(1.02);
 }
